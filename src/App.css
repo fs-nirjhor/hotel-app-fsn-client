@@ -1,0 +1,29 @@
+
+header {
+  text-align: center;
+  color: lightgrey;
+  padding: 10px 0;
+  font-size: large;
+  font-family: Monospace;
+}
+
+ a {
+  color: white;
+  display: inline-block;
+  margin: 2px 10px;
+  text-decoration: none;
+  padding: 2px 5px;
+}
+form code {
+	color: red;
+	font-size: small;
+}
+.card-footer {
+	font-size: small;
+}
+.book-page {
+	text-align: center;
+}
+.book-page i {
+	color: blue;
+}

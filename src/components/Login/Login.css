@@ -1,0 +1,10 @@
+.shipment-form  {
+  text-align: center;
+}
+.shipment-form input {
+  display: block;
+  margin: 10px auto;
+}
+.shipment-form p {
+  color: red;
+}
