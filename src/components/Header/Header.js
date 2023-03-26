@@ -42,7 +42,7 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink
-          to="/book"
+          to="/booking"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Book

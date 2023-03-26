@@ -5,7 +5,7 @@ import { useState, createContext } from "react";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
-import Book from "./components/Book/Book";
+import Booking from "./components/Booking/Booking";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import NotFound from "./components/NotFound/NotFound";
 import SnackBar from "./components/SnackBar/SnackBar";
@@ -23,8 +23,8 @@ return (
        <Route path="/login" element={<Login/>}/>
        
        <Route element={<PrivateRoute isAllowed={!!loggedUser.username}/>}>
-          <Route path="/book" element={<Book/>}/>
-          <Route path="/book/:bedType" element={<Book/>}/>
+          <Route path="/booking" element={<Booking/>}/>
+          <Route path="/booking/:bedType" element={<Booking/>}/>
        </Route>
        <Route path="*" element={<NotFound />}/>
        

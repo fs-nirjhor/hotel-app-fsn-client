@@ -8,8 +8,9 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import BookingList from "../BookingList/BookingList";
 
-const Book = () => {
+const Booking = () => {
   const [loggedUser, , , setMessage] = useContext(LoggedUserContext);
   const { bedType } = useParams();
   const today = dayjs();
@@ -25,7 +26,7 @@ const Book = () => {
   	})
   	.then(res => res.json())
   	.then(data => {
-  		if (data) {
+  		if (data?.insertedId) {
   		const newMessage = {
           isOpen: true,
           text: "Booking successful!",
@@ -62,9 +63,10 @@ const Book = () => {
       <Button variant="contained" sx={{ mt: 3 }} onClick = {handleBooking} >
         {bedType ? "Confirm Your Booking" : "Add A Room"}
       </Button>
+      <BookingList/>
     </Container>
   );
 };
 
-export default Book;
+export default Booking;
 

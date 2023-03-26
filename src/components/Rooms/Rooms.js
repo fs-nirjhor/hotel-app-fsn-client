@@ -52,7 +52,7 @@ export default function Rooms(props) {
           <AttachMoneyIcon/><small>: {price}</small>
         </IconButton>
           <Button variant="contained">
-            <Link to={`/book/${bedType}`}>Book</Link>
+            <Link to={`/booking/${bedType}`}>Book</Link>
           </Button>
       </CardActions>
     </Card>
