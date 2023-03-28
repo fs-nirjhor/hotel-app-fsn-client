@@ -4,7 +4,6 @@ import { useState, useEffect, useContext } from "react";
 import { LoggedUserContext } from "../../App.js";
 import dayjs from "dayjs";
 
-
 const BookingList = () => {
 	const [loggedUser] = useContext(LoggedUserContext);
 	const [bookings, setBookings] = useState([]);
