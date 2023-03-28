@@ -82,6 +82,7 @@ export default function Login() {
       .catch((error) => handleMessage(error.code, "error"));
   };
   const updateLoggedUser = (user) => {
+    handleIdToken();
     const newUser = {
       email: user.email,
       username: user.displayName,
@@ -100,6 +101,14 @@ export default function Login() {
   const handleMessage = (text, type) => {
     const newMessage = { isOpen: true, text: text, type: type };
     setMessage(newMessage);
+  };
+  const handleIdToken = () => {
+    auth.currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+  // Send token to your backend via HTTPS
+  sessionStorage.setItem("idToken",idToken);
+}).catch(function(error) {
+  console.log(error); 
+});
   };
   return (
     <ThemeProvider theme={theme}>
