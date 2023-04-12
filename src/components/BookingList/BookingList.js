@@ -8,7 +8,7 @@ const BookingList = () => {
 	const [loggedUser] = useContext(LoggedUserContext);
 	const [bookings, setBookings] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:4000/bookings?email=${loggedUser.email}`, {
+		fetch(`https://hotel-app-fsn-server.onrender.com/bookings?email=${loggedUser.email}`, {
 		  method: "GET",
 		  headers: {"Content-type": "application/json", "authorization": `Bearer ${sessionStorage.getItem("idToken")}`
 		  }
@@ -19,6 +19,7 @@ const BookingList = () => {
 		})
 		.catch(error => console.log(error.message));
 	}, [loggedUser.email]);
+	
 return (
 	<Box my={3} border={1} borderRadius={3} >
 	<h3>Total Booking: {bookings.length}</h3>

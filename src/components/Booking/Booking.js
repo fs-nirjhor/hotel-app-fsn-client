@@ -19,7 +19,7 @@ const Booking = () => {
   const [checkOutDate, setCheckOutDate] = useState(tomorrow);
   const handleBooking = () => {
   	const booking = {...loggedUser, checkInDate, checkOutDate}
-  	fetch(`http://localhost:4000/add-booking`, {
+  	fetch(`https://hotel-app-fsn-server.onrender.com/add-booking`, {
   		method: "POST", 
   		body: JSON.stringify(booking),
   		headers: {"Content-type": "application/json; charset=UTF-8"}
